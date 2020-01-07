@@ -1,14 +1,20 @@
 import React from 'react';
 
+// package
+import { Link } from '@reach/router';
+
+// styles
 import * as S from 'common/styles';
+import { Button } from './styles';
 
 function Register() {
   return (
     <S.Container>
       <S.LongDiv>
-        Regiset page <br /> Lorem, ipsum dolor sit amet consectetur adipisicing
-        elit. Laboriosam, sit. Deserunt voluptatibus accusantium magni soluta
-        adipisci consectetur ullam eligendi reiciendis.
+        Register page <br />
+        <Button>
+          <Link to='/'>Home</Link>
+        </Button>
       </S.LongDiv>
     </S.Container>
   );
