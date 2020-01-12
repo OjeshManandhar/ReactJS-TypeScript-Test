@@ -29,12 +29,19 @@ export const Navs = styled.div`
   align-items: center;
 `;
 
-export const NavLinks = styled.a`
+export const NavLinks = styled.span`
   margin: 0px 10px;
+  font-size: 20px;
   font-variant: small-caps;
+  cursor: pointer;
 
-  width: 100px;
+  width: 125px;
   text-align: center;
+
+  a {
+    color: black;
+    text-decoration: none;
+  }
 
   ::before {
     content: '[';
@@ -52,7 +59,10 @@ export const NavLinks = styled.a`
 
   :hover {
     color: blueviolet;
-    cursor: pointer;
+
+    a {
+      color: inherit;
+    }
 
     ::before {
       opacity: 1;

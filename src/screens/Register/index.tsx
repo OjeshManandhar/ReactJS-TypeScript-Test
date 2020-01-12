@@ -1,7 +1,7 @@
 import React from 'react';
 
 // package
-import { Link } from '@reach/router';
+import { Link, RouteComponentProps } from '@reach/router';
 
 // components
 import NavBar from 'components/NavBar';
@@ -10,7 +10,7 @@ import NavBar from 'components/NavBar';
 import * as S from 'common/styles/styles';
 import { Button } from './styles';
 
-function Register() {
+function Register(props: RouteComponentProps) {
   return (
     <S.Container>
       <NavBar />

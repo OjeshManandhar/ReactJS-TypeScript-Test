@@ -1,5 +1,8 @@
 import React from 'react';
 
+// packages
+import { Link } from '@reach/router';
+
 // context
 import NavBarContext from 'context/navBarContext/context';
 
@@ -9,14 +12,6 @@ import logo from 'assets/logo.png';
 // styles
 import * as Nav from './styles';
 
-function scrollToDiv(ref: React.RefObject<HTMLDivElement>) {
-  (ref as any).current.scrollIntoView({
-    behavior: 'smooth',
-    block: 'start',
-    inline: 'center'
-  });
-}
-
 function NavBar() {
   return (
     <NavBarContext.Consumer>
@@ -25,17 +20,17 @@ function NavBar() {
           <Nav.Container>
             <Nav.Logo src={logo} />
             <Nav.Navs>
-              <Nav.NavLinks onClick={() => scrollToDiv(context.home)}>
-                Home
+              <Nav.NavLinks>
+                <Link to='/home'>Home</Link>
               </Nav.NavLinks>
-              <Nav.NavLinks onClick={() => scrollToDiv(context.about)}>
-                About
+              <Nav.NavLinks>
+                <Link to='/about'>About</Link>
               </Nav.NavLinks>
-              <Nav.NavLinks onClick={() => scrollToDiv(context.product)}>
-                Product
+              <Nav.NavLinks>
+                <Link to='/product'>Product</Link>
               </Nav.NavLinks>
-              <Nav.NavLinks onClick={() => scrollToDiv(context.contact)}>
-                Contact
+              <Nav.NavLinks>
+                <Link to='/contact'>Contact</Link>
               </Nav.NavLinks>
             </Nav.Navs>
           </Nav.Container>
