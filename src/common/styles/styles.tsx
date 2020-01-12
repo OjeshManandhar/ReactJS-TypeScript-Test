@@ -14,7 +14,7 @@ export const Container = styled.div`
 `;
 
 export const LongDiv = styled.div<LongDivProp>`
-  height: 1000px;
+  height: ${props => (props.height ? props.height : '1000px')};
   width: 100%;
 
   padding-top: ${props => (props.paddingTop ? props.paddingTop : '0px')};

@@ -25,7 +25,7 @@ function Home(props: HomeProps) {
       </S.LongDiv>
       <S.LongDiv>About</S.LongDiv>
       <S.LongDiv>Product</S.LongDiv>
-      <S.LongDiv>Contact</S.LongDiv>
+      <S.LongDiv height='500px'>Contact</S.LongDiv>
     </S.Container>
   );
 }
