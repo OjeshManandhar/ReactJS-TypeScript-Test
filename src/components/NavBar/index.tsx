@@ -13,28 +13,11 @@ import logo from 'assets/logo.png';
 import * as Nav from './styles';
 
 function scrollToDiv(ref: React.RefObject<HTMLDivElement>) {
-  console.log('ref.current:', typeof ref.current);
-  console.log('ref:', ref);
-
   (ref as any).current.scrollIntoView({
     behavior: 'smooth',
     block: 'start',
     inline: 'center'
   });
-
-  // scrollIntoView(ref.current, {
-  //   behavior: 'smooth',
-  //   block: 'end',
-  //   inline: 'nearest'
-  // });
-
-  // ref.current.scrollIntoView({ block: 'end', behavior: 'smooth' });
-
-  // ref.current.scrollIntoView({
-  //   behavior: 'smooth',
-  //   block: 'end',
-  //   inline: 'nearest'
-  // });
 }
 
 function NavBar() {
