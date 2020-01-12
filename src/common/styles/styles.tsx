@@ -10,8 +10,6 @@ export const Container = styled.div`
   padding: 0;
   margin: 0;
 
-  border: 5px solid red;
-
   overflow: auto;
 `;
 
@@ -21,7 +19,7 @@ export const LongDiv = styled.div<LongDivProp>`
 
   padding-top: ${props => (props.paddingTop ? props.paddingTop : '0px')};
 
-  border: 5px solid green;
+  border: 1px solid green;
 
   background: #eee;
 `;

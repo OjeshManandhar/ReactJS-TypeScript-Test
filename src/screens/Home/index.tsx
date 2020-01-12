@@ -15,11 +15,14 @@ function Home() {
     <S.Container>
       <NavBar />
       <S.LongDiv paddingTop='100px'>
-        Home page <br />
+        Home <br />
         <Button>
           <Link to='/register'>Register</Link>
         </Button>
       </S.LongDiv>
+      <S.LongDiv>About</S.LongDiv>
+      <S.LongDiv>Product</S.LongDiv>
+      <S.LongDiv>Contact</S.LongDiv>
     </S.Container>
   );
 }
