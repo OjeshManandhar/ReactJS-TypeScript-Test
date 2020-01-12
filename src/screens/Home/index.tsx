@@ -29,7 +29,9 @@ function Home() {
         </S.LongDiv>
         <S.LongDiv ref={LongDivRefs.about}>About</S.LongDiv>
         <S.LongDiv ref={LongDivRefs.product}>Product</S.LongDiv>
-        <S.LongDiv ref={LongDivRefs.contact}>Contact</S.LongDiv>
+        <S.LongDiv ref={LongDivRefs.contact} height='500px'>
+          Contact
+        </S.LongDiv>
       </S.Container>
     </NavBarProvider>
   );
