@@ -19,7 +19,7 @@ export const Container = styled.div`
 
 export const Logo = styled.img`
   height: 75px;
-  width: 75px;
+  width: 70px;
 `;
 
 export const Navs = styled.div`
@@ -30,19 +30,47 @@ export const Navs = styled.div`
 `;
 
 export const NavLinks = styled.span`
-  margin: 0px 20px;
+  margin: 0px 10px;
+  font-size: 20px;
   font-variant: small-caps;
+  cursor: pointer;
+
+  width: 125px;
+  text-align: center;
+
+  a {
+    color: black;
+    text-decoration: none;
+  }
+
+  ::before {
+    content: '[';
+    padding-right: 0px;
+    opacity: 0;
+    transition: padding-right 0.5s;
+  }
+
+  ::after {
+    content: ']';
+    padding-left: 0px;
+    opacity: 0;
+    transition: padding-left 0.5s;
+  }
 
   :hover {
     color: blueviolet;
 
+    a {
+      color: inherit;
+    }
+
     ::before {
-      content: '[';
-      padding-right: 10px;
+      opacity: 1;
+      padding-right: 15px;
     }
     ::after {
-      content: '  ]';
-      padding-left: 10px;
+      opacity: 1;
+      padding-left: 15px;
     }
   }
 `;
