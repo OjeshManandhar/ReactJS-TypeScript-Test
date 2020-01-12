@@ -1,8 +1,5 @@
 import React from 'react';
 
-// packages
-import scrollIntoView from 'scroll-into-view-if-needed';
-
 // context
 import NavBarContext from 'context/navBarContext/context';
 
