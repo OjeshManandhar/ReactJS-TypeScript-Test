@@ -1,5 +1,8 @@
 import React from 'react';
 
+// packages
+import { Location } from '@reach/router';
+
 // context
 import NavBarContext from 'context/navBarContext/context';
 
@@ -22,23 +25,30 @@ function NavBar() {
     <NavBarContext.Consumer>
       {context => {
         return (
-          <Nav.Container>
-            <Nav.Logo src={logo} />
-            <Nav.Navs>
-              <Nav.NavLinks onClick={() => scrollToDiv(context.home)}>
-                Home
-              </Nav.NavLinks>
-              <Nav.NavLinks onClick={() => scrollToDiv(context.about)}>
-                About
-              </Nav.NavLinks>
-              <Nav.NavLinks onClick={() => scrollToDiv(context.product)}>
-                Product
-              </Nav.NavLinks>
-              <Nav.NavLinks onClick={() => scrollToDiv(context.contact)}>
-                Contact
-              </Nav.NavLinks>
-            </Nav.Navs>
-          </Nav.Container>
+          <Location>
+            {props => {
+              console.log('props.location.pathname:', props.location.pathname);
+              return (
+                <Nav.Container>
+                  <Nav.Logo src={logo} />
+                  <Nav.Navs>
+                    <Nav.NavLinks onClick={() => scrollToDiv(context.home)}>
+                      Home
+                    </Nav.NavLinks>
+                    <Nav.NavLinks onClick={() => scrollToDiv(context.about)}>
+                      About
+                    </Nav.NavLinks>
+                    <Nav.NavLinks onClick={() => scrollToDiv(context.product)}>
+                      Product
+                    </Nav.NavLinks>
+                    <Nav.NavLinks onClick={() => scrollToDiv(context.contact)}>
+                      Contact
+                    </Nav.NavLinks>
+                  </Nav.Navs>
+                </Nav.Container>
+              );
+            }}
+          </Location>
         );
       }}
     </NavBarContext.Consumer>
