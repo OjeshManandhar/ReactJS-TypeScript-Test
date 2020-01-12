@@ -3,6 +3,9 @@ import React from 'react';
 // package
 import { Link } from '@reach/router';
 
+//components
+import NavBar from 'components/NavBar';
+
 // styles
 import * as S from 'common/styles';
 import { Button } from './styles';
@@ -10,6 +13,7 @@ import { Button } from './styles';
 function Home() {
   return (
     <S.Container>
+      <NavBar />
       <S.LongDiv>
         Home page <br />
         <Button>
