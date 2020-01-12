@@ -35,6 +35,7 @@ export const NavLinks = styled.span`
 
   :hover {
     color: blueviolet;
+    cursor: pointer;
 
     ::before {
       content: '[';
