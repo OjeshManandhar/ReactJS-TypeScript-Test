@@ -19,7 +19,7 @@ export const Container = styled.div`
 
 export const Logo = styled.img`
   height: 75px;
-  width: 75px;
+  width: 70px;
 `;
 
 export const Navs = styled.div`
@@ -30,10 +30,13 @@ export const Navs = styled.div`
 `;
 
 export const NavLinks = styled.a`
-  margin: 0px 20px;
+  margin: 0px 10px;
   color: black;
   text-decoration: none;
   font-variant: small-caps;
+
+  width: 100px;
+  text-align: center;
 
   :hover {
     color: blueviolet;
