@@ -9,10 +9,10 @@ function NavBar() {
     <Nav.Container>
       <Nav.Logo src={logo} />
       <Nav.Navs>
-        <Nav.NavLinks>Home</Nav.NavLinks>
-        <Nav.NavLinks>About</Nav.NavLinks>
-        <Nav.NavLinks>Product</Nav.NavLinks>
-        <Nav.NavLinks>Contact</Nav.NavLinks>
+        <Nav.NavLinks href='#home'>Home</Nav.NavLinks>
+        <Nav.NavLinks href='#about'>About</Nav.NavLinks>
+        <Nav.NavLinks href='#product'>Product</Nav.NavLinks>
+        <Nav.NavLinks href='#contact'>Contact</Nav.NavLinks>
       </Nav.Navs>
     </Nav.Container>
   );

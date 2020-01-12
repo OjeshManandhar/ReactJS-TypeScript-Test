@@ -14,15 +14,15 @@ function Home() {
   return (
     <S.Container>
       <NavBar />
-      <S.LongDiv paddingTop='100px'>
+      <S.LongDiv paddingTop='100px' id='home'>
         Home <br />
         <Button>
           <Link to='/register'>Register</Link>
         </Button>
       </S.LongDiv>
-      <S.LongDiv>About</S.LongDiv>
-      <S.LongDiv>Product</S.LongDiv>
-      <S.LongDiv>Contact</S.LongDiv>
+      <S.LongDiv id='about'>About</S.LongDiv>
+      <S.LongDiv id='product'>Product</S.LongDiv>
+      <S.LongDiv id='contact'>Contact</S.LongDiv>
     </S.Container>
   );
 }

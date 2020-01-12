@@ -29,8 +29,10 @@ export const Navs = styled.div`
   align-items: center;
 `;
 
-export const NavLinks = styled.span`
+export const NavLinks = styled.a`
   margin: 0px 20px;
+  color: black;
+  text-decoration: none;
   font-variant: small-caps;
 
   :hover {
