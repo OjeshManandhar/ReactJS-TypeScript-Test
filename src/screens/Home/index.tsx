@@ -10,7 +10,10 @@ import NavBar from 'components/NavBar';
 import * as S from 'common/styles/styles';
 import { Button } from './styles';
 
-function Home() {
+// types
+import { HomeProps } from 'Navigator/types';
+
+function Home(props: HomeProps) {
   return (
     <S.Container>
       <NavBar />
