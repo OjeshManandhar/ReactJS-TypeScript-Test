@@ -16,7 +16,38 @@ import { Button } from './styles';
 // types
 import { HomeProps } from 'Navigator/types';
 
+function scrollToDiv(ref: React.RefObject<HTMLDivElement>) {
+  // Wont work if the ref is not yet loaded in DOM
+  // so this event loop will continue till the ref is loaded
+  // and scroll it to view
+  // PROBLEM: If by mistake we pass a ref that is not going to be
+  // rendered then, it will loop forever.
+  // Clearing the interval after certain time colud colve this problem.
+  var pageRenderLoop: any = setInterval(() => {
+    if ((ref as any).current) {
+      clearInterval(pageRenderLoop);
+      pageRenderLoop = false; // To indicate interval is cleared
+
+      (ref as any).current.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start',
+        inline: 'center'
+      });
+    }
+  }, 100);
+
+  setTimeout(() => {
+    if (pageRenderLoop !== false) {
+      clearInterval(pageRenderLoop);
+      pageRenderLoop = false; // To indicate interval is cleared
+    }
+  }, 5 * 1000);
+}
+
 function Home(props: HomeProps) {
+  // To scroll to the required div
+  scrollToDiv(LongDivRefs[props.sectionId as string]);
+
   return (
     <S.Container>
       <NavBar />
