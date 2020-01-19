@@ -19,6 +19,9 @@ function Register(props: RouteComponentProps) {
         <Button>
           <Link to='/'>Home</Link>
         </Button>
+        <Button>
+          <Link to='/cards'>Cards</Link>
+        </Button>
       </S.LongDiv>
     </S.Container>
   );

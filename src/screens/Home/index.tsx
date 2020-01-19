@@ -56,6 +56,9 @@ function Home(props: HomeProps) {
         <Button>
           <Link to='/register'>Register</Link>
         </Button>
+        <Button>
+          <Link to='/cards'>Cards</Link>
+        </Button>
       </S.LongDiv>
       <S.LongDiv ref={LongDivRefs.about}>About</S.LongDiv>
       <S.LongDiv ref={LongDivRefs.product}>Product</S.LongDiv>
