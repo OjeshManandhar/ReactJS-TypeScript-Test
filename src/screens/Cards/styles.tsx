@@ -44,7 +44,7 @@ export const Slider = styled.div`
 
   box-sizing: content-box;
 
-  @media (min-width: 450px) {
+  @media (min-width: 400px) {
     width: 90%;
   }
 
@@ -69,7 +69,7 @@ const SliderControl = styled.div`
   cursor: pointer;
   border-radius: 50%;
 
-  @media (min-width: 992px) {
+  @media (min-width: 1200px) {
     display: none;
   }
 `;
@@ -77,7 +77,7 @@ const SliderControl = styled.div`
 export const SliderControlLeft = styled(SliderControl)`
   left: 0;
 
-  @media (min-width: 450px) {
+  @media (min-width: 400px) {
     left: 5%;
   }
 `;
@@ -85,7 +85,7 @@ export const SliderControlLeft = styled(SliderControl)`
 export const SliderControlRight = styled(SliderControl)`
   right: 0;
 
-  @media (min-width: 450px) {
+  @media (min-width: 400px) {
     right: 5%;
   }
 `;
@@ -98,18 +98,18 @@ export const CardContainer = styled.div`
   max-width: 100%;
   min-width: 100%;
 
-  @media (min-width: 700px) {
+  @media (min-width: 800px) {
     max-width: 50%;
     min-width: 50%;
   }
-  @media (min-width: 992px) {
-    max-width: 400px;
-    min-width: 400px;
+  @media (min-width: 1200px) {
+    max-width: 450px;
+    min-width: 450px;
   }
 `;
 
 export const Card = styled.div`
-  width: 300px;
+  width: 100%;
 
   padding: 10px;
   margin: 0px auto;
@@ -122,8 +122,8 @@ export const Card = styled.div`
   justify-content: flex-start;
   align-items: center;
 
-  @media (max-width: 350px) {
-    width: 100%;
+  @media (min-width: 400px) {
+    width: 350px;
   }
 
   height: 100%;

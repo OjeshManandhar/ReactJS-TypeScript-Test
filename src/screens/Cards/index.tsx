@@ -26,7 +26,7 @@ var displayedCard = 0,
   rightCard = 1;
 
 function scrollCards(direction: string) {
-  if (window.innerWidth < 700) {
+  if (window.innerWidth < 800) {
     if (direction === 'left') {
       if (displayedCard !== 0) {
         displayedCard--;
@@ -36,7 +36,7 @@ function scrollCards(direction: string) {
         displayedCard++;
       }
     }
-  } else if (window.innerWidth < 992) {
+  } else if (window.innerWidth < 1200) {
     if (direction === 'left') {
       if (leftCard !== 0) {
         leftCard--;
@@ -68,7 +68,7 @@ function handleResize() {
 }
 
 function preventScroll() {
-  if (window.innerWidth < 992) {
+  if (window.innerWidth < 1200) {
     if ((slider as any).current) {
       (slider as any).current.style['overflow-x'] = 'hidden';
     }
