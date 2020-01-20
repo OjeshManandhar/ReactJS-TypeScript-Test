@@ -31,10 +31,9 @@ export const Container = styled.div`
 `;
 
 // This component must be have a width and overflow property
-// It child can have large(width) content
 export const Slider = styled.div`
-  width: 90%;
-  height: 500px;
+  width: 100%;
+  /* height: 500px; */
 
   display: flex;
   justify-content: space-between;
@@ -45,18 +44,47 @@ export const Slider = styled.div`
 
   box-sizing: content-box;
 
+  /* Small devices and up (>= 576px) */
+  @media (min-width: 576px) {
+    width: 90%;
+  }
+
   ::-webkit-scrollbar {
-    /* display: none; */
+    display: none;
   }
 `;
 
 // This component's must have a min-width, width doesnt work inside flex parent
-export const Card = styled.div`
+// This component will be used to manage RESPONSIVE size of the card
+export const CardContainer = styled.div`
   box-sizing: border-box;
 
-  border: 5px dashed black;
-  max-width: 100vw;
-  min-width: 200px;
-  height: 300px;
-  margin: 5px;
+  /* To use em in child i.e. Card */
+  font-size: 16px;
+
+  max-width: 100%;
+  min-width: 100%;
+
+  @media (min-width: 700px) {
+    max-width: 50%;
+    min-width: 50%;
+  }
+  @media (min-width: 992px) {
+    max-width: 400px;
+    min-width: 400px;
+  }
+`;
+
+export const Card = styled.div`
+  width: 300px;
+
+  margin: 0px auto;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+
+  height: 540px;
+  border: 2px solid blueviolet;
 `;

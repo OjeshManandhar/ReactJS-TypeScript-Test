@@ -13,7 +13,7 @@ import * as S from './styles';
 function Cards(props: RouteComponentProps) {
   return (
     <Container>
-      <NavBar />
+      {/* <NavBar /> */}
       <S.Padding>
         Cards <br />
         <S.Button>
@@ -25,18 +25,27 @@ function Cards(props: RouteComponentProps) {
       </S.Padding>
       <S.Container>
         <S.Slider>
-          <S.Card>0</S.Card>
-          <S.Card>1</S.Card>
-          <S.Card>2</S.Card>
-          <S.Card>3</S.Card>
-          <S.Card>4</S.Card>
-          <S.Card>5</S.Card>
-          <S.Card>6</S.Card>
-          <S.Card>7</S.Card>
-          <S.Card>8</S.Card>
-          <S.Card>9</S.Card>
-          <S.Card>10</S.Card>
-          <S.Card>11</S.Card>
+          <S.CardContainer>
+            <S.Card>
+              <h1>0</h1>
+              <h1>Image</h1>
+              <p>Image Info</p>
+            </S.Card>
+          </S.CardContainer>
+          <S.CardContainer>
+            <S.Card>
+              <h1>1</h1>
+              <h1>Image</h1>
+              <p>Image Info</p>
+            </S.Card>
+          </S.CardContainer>
+          <S.CardContainer>
+            <S.Card>
+              <h1>2</h1>
+              <h1>Image</h1>
+              <p>Image Info</p>
+            </S.Card>
+          </S.CardContainer>
         </S.Slider>
       </S.Container>
     </Container>
