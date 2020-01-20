@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 // package
 import { Link, RouteComponentProps } from '@reach/router';
@@ -50,11 +50,57 @@ function scrollCards(direction: string) {
   (cards[displayedCard] as any).current.scrollIntoView({
     behavior: 'smooth',
     block: 'center',
-    inline: 'nearest'
+    inline: 'center'
   });
 }
 
+function handleResize() {
+  console.log('displayedCard:', displayedCard);
+
+  displayedCard = leftCard = 0;
+  rightCard = 1;
+
+  if ((cards[displayedCard] as any).current) {
+    (cards[displayedCard] as any).current.scrollIntoView({
+      behavior: 'smooth',
+      block: 'center',
+      inline: 'center'
+    });
+  }
+}
+
+function preventScroll() {
+  if (window.innerWidth < 992) {
+    if ((slider as any).current) {
+      (slider as any).current.style['overflow-x'] = 'hidden';
+    }
+
+    // this does not worker. Why??
+    // slider.current?.style['overflow-x'] = 'hidden';
+  } else {
+    if ((slider as any).current) {
+      (slider as any).current.style['overflow-x'] = 'scroll';
+    }
+
+    // this does not worker. Why??
+    // slider.current?.style['overflow-x'] = 'scroll';
+  }
+}
+
 function Cards(props: RouteComponentProps) {
+  window.onresize = handleResize;
+
+  useEffect(() => {
+    // (slider as any).current === slider.current?
+    slider.current?.addEventListener('touchmove', preventScroll, false);
+    slider.current?.addEventListener('scroll', preventScroll, false);
+
+    return () => {
+      slider.current?.removeEventListener('touchmove', preventScroll, false);
+      slider.current?.removeEventListener('scroll', preventScroll, false);
+    };
+  });
+
   return (
     <Container>
       {/* <NavBar /> */}
