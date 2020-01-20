@@ -3,6 +3,11 @@ import React, { useEffect } from 'react';
 // package
 import { Link, RouteComponentProps } from '@reach/router';
 
+// assets
+import Card0 from 'assets/Cards/card0.jpg';
+import Card1 from 'assets/Cards/card1.jpg';
+import Card2 from 'assets/Cards/card2.jpg';
+
 // components
 // import NavBar from 'components/NavBar';
 
@@ -117,23 +122,37 @@ function Cards(props: RouteComponentProps) {
         <S.Slider ref={slider}>
           <S.CardContainer ref={cards[0]}>
             <S.Card>
-              <h1>0</h1>
-              <h1>Image</h1>
-              <p>Image Info</p>
+              <S.CardImage src={Card0} />
+              <S.CardHeader>Card 0</S.CardHeader>
+              <S.CardContent>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Curabitur mollis lectus quam, ut ullamcorper felis tristique a.
+                Nunc tristique risus ante, sit amet aliquam ex blandit eu. Donec
+                elit mauris.
+              </S.CardContent>
             </S.Card>
           </S.CardContainer>
           <S.CardContainer ref={cards[1]}>
             <S.Card>
-              <h1>1</h1>
-              <h1>Image</h1>
-              <p>Image Info</p>
+              <S.CardImage src={Card1} />
+              <S.CardHeader>Card 1</S.CardHeader>
+              <S.CardContent>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis
+                facilisis, tortor id aliquam condimentum, enim.
+              </S.CardContent>
             </S.Card>
           </S.CardContainer>
           <S.CardContainer ref={cards[2]}>
             <S.Card>
-              <h1>2</h1>
-              <h1>Image</h1>
-              <p>Image Info</p>
+              <S.CardImage src={Card2} />
+              <S.CardHeader>Card 2</S.CardHeader>
+              <S.CardContent>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
+                luctus varius quam at ultricies. Etiam suscipit diam sed tortor
+                fringilla, et ullamcorper tellus congue. Proin at posuere leo,
+                vel elementum lectus. Nullam interdum velit vel nunc venenatis
+                posuere. Pellentesque habitant.
+              </S.CardContent>
             </S.Card>
           </S.CardContainer>
         </S.Slider>

@@ -35,8 +35,9 @@ export const Slider = styled.div`
   /* height: 500px; */
 
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
-  align-items: center;
+  align-items: stretch;
   overflow-x: scroll;
 
   border: 1px solid red;
@@ -94,9 +95,6 @@ export const SliderControlRight = styled(SliderControl)`
 export const CardContainer = styled.div`
   box-sizing: border-box;
 
-  /* To use em in child i.e. Card */
-  font-size: 16px;
-
   max-width: 100%;
   min-width: 100%;
 
@@ -113,7 +111,11 @@ export const CardContainer = styled.div`
 export const Card = styled.div`
   width: 300px;
 
+  padding: 10px;
   margin: 0px auto;
+
+  /* To use em in child */
+  font-size: 20px;
 
   display: flex;
   flex-direction: column;
@@ -124,6 +126,26 @@ export const Card = styled.div`
     width: 100%;
   }
 
-  height: 540px;
+  height: 100%;
   border: 2px solid blueviolet;
+`;
+
+export const CardImage = styled.img`
+  width: 100%;
+  max-height: 250px;
+  object-fit: scale-down;
+`;
+
+export const CardHeader = styled.h2`
+  font-size: 2em;
+  font-style: bold;
+  font-weight: 700;
+  margin: 10px 30px;
+`;
+
+export const CardContent = styled.p`
+  font-size: 1em;
+  font-family: 'Times New Roman';
+  color: grey;
+  margin: 0 30px;
 `;
