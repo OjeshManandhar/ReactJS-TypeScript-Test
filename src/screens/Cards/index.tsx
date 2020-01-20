@@ -115,10 +115,10 @@ function Cards(props: RouteComponentProps) {
       </S.Padding>
       <S.Container>
         <S.SliderControlLeft onClick={() => scrollCards('left')}>
-          {'<-'}
+          {'<'}
         </S.SliderControlLeft>
         <S.SliderControlRight onClick={() => scrollCards('right')}>
-          {'->'}
+          {'>'}
         </S.SliderControlRight>
 
         <S.Slider ref={slider}>

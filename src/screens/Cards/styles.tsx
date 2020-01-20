@@ -40,8 +40,6 @@ export const Slider = styled.div`
   align-items: stretch;
   overflow-x: scroll;
 
-  border: 1px solid red;
-
   box-sizing: content-box;
 
   @media (min-width: 400px) {
@@ -58,16 +56,25 @@ const SliderControl = styled.div`
   z-index: 300;
   top: calc(50% - 50px);
 
-  font-size: 25px;
+  font-family: cursive;
+  font-size: 40px;
+  font-weight: 500;
 
   width: 50px;
   height: 50px;
-  line-height: 50px;
+  line-height: 40px;
   text-align: center;
 
-  background-color: grey;
   cursor: pointer;
   border-radius: 50%;
+
+  color: black;
+  background-color: rgba(200, 200, 200, 0.07);
+
+  :hover {
+    color: white;
+    background-color: blueviolet;
+  }
 
   @media (min-width: 1200px) {
     display: none;
