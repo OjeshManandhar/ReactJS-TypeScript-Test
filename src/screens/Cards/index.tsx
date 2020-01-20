@@ -59,14 +59,6 @@ function scrollCards(direction: string) {
   });
 }
 
-function handleResize() {
-  displayedCard = leftCard = 0;
-  rightCard = 1;
-
-  // Wont provide any animation
-  (slider as any).current.scrollLeft = 0;
-}
-
 function preventScroll() {
   if (window.innerWidth < 1200) {
     if ((slider as any).current) {
@@ -83,6 +75,16 @@ function preventScroll() {
     // this does not worker. Why??
     // slider.current?.style['overflow-x'] = 'scroll';
   }
+}
+
+function handleResize() {
+  preventScroll();
+
+  displayedCard = leftCard = 0;
+  rightCard = 1;
+
+  // Wont provide any animation
+  (slider as any).current.scrollLeft = 0;
 }
 
 function Cards(props: RouteComponentProps) {
