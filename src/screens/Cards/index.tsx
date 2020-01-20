@@ -24,6 +24,9 @@ function Cards(props: RouteComponentProps) {
         </S.Button>
       </S.Padding>
       <S.Container>
+        <S.SliderControlLeft>{'<-'}</S.SliderControlLeft>
+        <S.SliderControlRight>{'->'}</S.SliderControlRight>
+
         <S.Slider>
           <S.CardContainer>
             <S.Card>
