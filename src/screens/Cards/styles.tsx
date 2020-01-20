@@ -27,10 +27,6 @@ export const Container = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-
-  border: 5px solid blue;
-
-  overflow: hidden;
 `;
 
 // This component must be have a width and overflow property
@@ -43,7 +39,7 @@ export const Slider = styled.div`
   align-items: center;
   overflow-x: scroll;
 
-  border: 5px solid red;
+  border: 1px solid red;
 
   box-sizing: content-box;
 
