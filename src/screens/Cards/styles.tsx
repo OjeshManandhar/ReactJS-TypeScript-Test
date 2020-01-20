@@ -52,6 +52,43 @@ export const Slider = styled.div`
   }
 `;
 
+const SliderControl = styled.div`
+  position: absolute;
+  z-index: 300;
+  top: calc(50% - 50px);
+
+  font-size: 25px;
+
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+
+  background-color: grey;
+  cursor: pointer;
+  border-radius: 50%;
+
+  @media (min-width: 992px) {
+    display: none;
+  }
+`;
+
+export const SliderControlLeft = styled(SliderControl)`
+  left: 0;
+
+  @media (min-width: 450px) {
+    left: 5%;
+  }
+`;
+
+export const SliderControlRight = styled(SliderControl)`
+  right: 0;
+
+  @media (min-width: 450px) {
+    right: 5%;
+  }
+`;
+
 // This component's must have a min-width, width doesnt work inside flex parent
 // This component will be used to manage RESPONSIVE size of the card
 export const CardContainer = styled.div`
@@ -89,41 +126,4 @@ export const Card = styled.div`
 
   height: 540px;
   border: 2px solid blueviolet;
-`;
-
-const SliderControl = styled.div`
-  position: absolute;
-  z-index: 300;
-  top: calc(50% - 50px);
-
-  font-size: 25px;
-
-  width: 50px;
-  height: 50px;
-  line-height: 50px;
-  text-align: center;
-
-  background-color: grey;
-  cursor: pointer;
-  border-radius: 50%;
-
-  @media (min-width: 992px) {
-    display: none;
-  }
-`;
-
-export const SliderControlLeft = styled(SliderControl)`
-  left: 0;
-
-  @media (min-width: 450px) {
-    left: 5%;
-  }
-`;
-
-export const SliderControlRight = styled(SliderControl)`
-  right: 0;
-
-  @media (min-width: 450px) {
-    right: 5%;
-  }
 `;
