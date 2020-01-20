@@ -44,8 +44,7 @@ export const Slider = styled.div`
 
   box-sizing: content-box;
 
-  /* Small devices and up (>= 576px) */
-  @media (min-width: 576px) {
+  @media (min-width: 450px) {
     width: 90%;
   }
 
@@ -84,6 +83,10 @@ export const Card = styled.div`
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
+
+  @media (max-width: 350px) {
+    width: 100%;
+  }
 
   height: 540px;
   border: 2px solid blueviolet;
