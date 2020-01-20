@@ -1,10 +1,20 @@
 import styled from 'styled-components';
 
-export const BigDiv = styled.div`
-  width: 3000px;
-  height: 500px;
+export const Padding = styled.div`
+  padding: 100px;
+`;
 
-  border: 5px dashed black;
+export const Button = styled.button`
+  font-size: 15px;
+  color: white;
+  background-color: blueviolet;
+  padding: 10px 20px;
+
+  /* The Link component of reach router has <a> tag so change the style of all <a> childrens */
+  a {
+    text-decoration: none;
+    color: white;
+  }
 `;
 
 export const Container = styled.div`
