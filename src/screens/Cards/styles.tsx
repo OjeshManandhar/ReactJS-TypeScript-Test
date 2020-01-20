@@ -115,15 +115,20 @@ export const Card = styled.div`
   margin: 0px auto;
 
   /* To use em in child */
-  font-size: 20px;
+  font-size: 16px;
 
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
 
+  @media (min-width: 300px) {
+    font-size: 18px;
+  }
+
   @media (min-width: 400px) {
     width: 350px;
+    font-size: 20px;
   }
 
   height: 100%;
