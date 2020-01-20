@@ -55,18 +55,11 @@ function scrollCards(direction: string) {
 }
 
 function handleResize() {
-  console.log('displayedCard:', displayedCard);
-
   displayedCard = leftCard = 0;
   rightCard = 1;
 
-  if ((cards[displayedCard] as any).current) {
-    (cards[displayedCard] as any).current.scrollIntoView({
-      behavior: 'smooth',
-      block: 'center',
-      inline: 'center'
-    });
-  }
+  // Wont provide any animation
+  (slider as any).current.scrollLeft = 0;
 }
 
 function preventScroll() {
