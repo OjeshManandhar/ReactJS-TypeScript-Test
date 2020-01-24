@@ -25,13 +25,15 @@ function Register(props: RouteComponentProps) {
       {props => {
         console.log('query:', props);
 
-        var query = props.location.search.replace('?query=', '');
+        if (props.location.search !== '') {
+          var query = props.location.search.replace('?query=', '');
 
-        query = replaceGlobally(query, '%22', '"');
-        query = replaceGlobally(query, '%20', ' ');
+          query = replaceGlobally(query, '%22', '"');
+          query = replaceGlobally(query, '%20', ' ');
 
-        console.log('query:', query);
-        console.log('query:', JSON.parse(query));
+          console.log('query:', query);
+          console.log('query:', JSON.parse(query));
+        }
 
         return (
           <S.Container>
