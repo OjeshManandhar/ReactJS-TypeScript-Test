@@ -48,6 +48,11 @@ function Home(props: HomeProps) {
   // To scroll to the required div
   scrollToDiv(LongDivRefs[props.sectionId as string]);
 
+  const query: { [index: string]: string } = {
+    scrollTo: 'home',
+    jumpTo: 'home section'
+  };
+
   return (
     <S.Container>
       <NavBar />
@@ -57,7 +62,7 @@ function Home(props: HomeProps) {
           <Link to='/register'>Register</Link>
         </Button>
         <Button>
-          <Link to='/register?query=there+is+query+here'>
+          <Link to={`/register?query=${JSON.stringify(query)}`}>
             Register with query
           </Link>
         </Button>
