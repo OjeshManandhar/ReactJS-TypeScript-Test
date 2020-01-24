@@ -57,6 +57,11 @@ function Home(props: HomeProps) {
           <Link to='/register'>Register</Link>
         </Button>
         <Button>
+          <Link to='/register?query=there+is+query+here'>
+            Register with query
+          </Link>
+        </Button>
+        <Button>
           <Link to='/cards'>Cards</Link>
         </Button>
       </S.LongDiv>
